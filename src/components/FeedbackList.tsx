@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { List, ListItem, Paper, Typography, CircularProgress, Alert, Rating, Box } from '@mui/material';
-import { psychologistsData, Psychologist } from '../data';
+import { CircularProgress, Alert, Box } from '@mui/material';
+import { psychologistsData, Psychologist } from '@/data';
 import FeedbackItem from './FeedbackItem';
 
 const FeedbackList: React.FC = () => {
