@@ -3,20 +3,20 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js';
-import { psychologistsData } from '../data';
+import { psychologistsData, calculateAverageScore } from '@/data';
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
 const PsychologistChart: React.FC = () => {
-  const labels = psychologistsData.map(p => p.name);
-  const scores = psychologistsData.map(p => p.averageScore);
+  const labels = psychologistsData.map((p) => p.name);
+  const averageScores = psychologistsData.map((p) => calculateAverageScore(p));
 
   const data = {
     labels,
     datasets: [
       {
         label: 'Average Score',
-        data: scores,
+        data: averageScores,
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgb(54, 162, 235)',
         borderWidth: 1
