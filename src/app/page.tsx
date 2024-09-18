@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import FeedbackList from '@/components/FeedbackList';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
           alignItems: 'center',
         }}
       >
-        
+        <FeedbackList />
       </Box>
     </Container>
   );
