@@ -1,8 +1,8 @@
 'use client';
-import { Inter } from 'next/font/google';
+import { Sora } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 
-const inter = Inter({
+const sora = Sora({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -13,7 +13,7 @@ const theme = createTheme({
     mode: 'light',
   },
   typography: {
-    fontFamily: inter.style.fontFamily,
+    fontFamily: sora.style.fontFamily,
   },
   components: {
     MuiAlert: {
